@@ -2,17 +2,19 @@
     width: 170px;
 }
 
-.Container{
+.Container {
     width: 100%;
     height: 200px;
     display: flex;
     margin: 0 auto;
-    .Box{
+
+    .Box {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: scroll;
         width: 100%;
-        .card{
+
+        .card {
             width: 80%;
             height: auto;
             flex: 0 0 auto;
@@ -22,7 +24,7 @@
 
 *::-webkit-scrollbar {
     display: none;
-  }
+}
 
 
 @media (max-width: 500px){

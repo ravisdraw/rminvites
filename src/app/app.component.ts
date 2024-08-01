@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   @ViewChild('seconds', { static: true }) seconds!: ElementRef;
 
   constructor(
-    private applicationRef: ApplicationRef,
+    private applicationRef: ApplicationRef, 
   ) {
     // ...
   }
@@ -40,6 +40,10 @@ export class AppComponent implements OnInit {
       setInterval(() => this.tickTock(), 1000);
     });
   }
+
+  goToLink() {  
+    window.open('https://wa.link/a1azw9', '_blank', 'noopener,noreferrer');  
+  }  
 
   tickTock() {
     const now = new Date().getTime();  
