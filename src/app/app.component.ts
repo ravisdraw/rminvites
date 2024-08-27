@@ -48,10 +48,10 @@ export class AppComponent implements OnInit {
   tickTock() {
     const now = new Date().getTime();  
     const distance = this.targetDate.getTime() - now; 
-    this.days.nativeElement.innerText = Math.floor(distance / (1000 * 60 * 60 * 24));  
-    this.hours.nativeElement.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
-    this.minutes.nativeElement.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
-    this.seconds.nativeElement.innerText =  Math.floor((distance % (1000 * 60)) / 1000);  
+    this.days.nativeElement.innerText =  Math.abs(Math.floor(distance / (1000 * 60 * 60 * 24)));  
+    this.hours.nativeElement.innerText = Math.abs(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));  
+    this.minutes.nativeElement.innerText = Math.abs(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));  
+    this.seconds.nativeElement.innerText = Math.abs( Math.floor((distance % (1000 * 60)) / 1000));  
   }
 
   changeMusic() {
